@@ -1,0 +1,15 @@
+@use '/src/styles/theme/color' as c;
+
+.container {
+  color: c.$C_MAIN;
+  text-align: right;
+  .dark {
+    color: c.$C_WHITE;
+  }
+  .label {
+    padding-left: 15px;
+    margin-bottom: 5px;
+    // text-shadow: -1px -1px 0 c.$C_SUB, 1px -1px 0 c.$C_SUB, -1px 1px 0 c.$C_SUB, 1px 1px 0 c.$C_SUB;
+    cursor: pointer;
+  }
+}

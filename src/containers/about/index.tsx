@@ -1,17 +1,55 @@
-import React, { useRef } from 'react';
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
 
-import Layout from '@/components/layout/intro';
+import React from 'react';
+import Slider from 'react-slick';
 
 import styles from './about.module.scss';
 
 const About = () => {
-  const aboutRef = useRef<HTMLDivElement>(null);
+  const setting = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+    cssEase: 'linear',
+  };
   return (
-    <Layout>
-      <section ref={aboutRef} className={styles.container}>
-        어바웃
-      </section>
-    </Layout>
+    <section className={styles.container}>
+      <Slider className={styles.slick} {...setting}>
+        <div className={styles.imageWrapper}>
+          <img src={'/static/images/Intro/business_card_back_light.png'} className={styles.image} alt={'명함 예시2'} />
+        </div>
+        <div className={styles.imageWrapper}>
+          <img src={'/static/images/Intro/business_card_back_dark.png'} className={styles.image} alt={'명함 예시2'} />
+        </div>
+        <div className={styles.imageWrapper}>
+          <img src={'/static/images/Intro/business_card_back_light.png'} className={styles.image} alt={'명함 예시2'} />
+        </div>
+        <div className={styles.imageWrapper}>
+          <img src={'/static/images/Intro/business_card_back_dark.png'} className={styles.image} alt={'명함 예시2'} />
+        </div>
+        <div className={styles.imageWrapper}>
+          <img src={'/static/images/Intro/business_card_back_dark.png'} className={styles.image} alt={'명함 예시2'} />
+        </div>
+        <div className={styles.imageWrapper}>
+          <img src={'/static/images/Intro/business_card_back_dark.png'} className={styles.image} alt={'명함 예시2'} />
+        </div>
+        <div className={styles.imageWrapper}>
+          <img src={'/static/images/Intro/business_card_back_dark.png'} className={styles.image} alt={'명함 예시2'} />
+        </div>
+        <div className={styles.imageWrapper}>
+          <img src={'/static/images/Intro/business_card_back_dark.png'} className={styles.image} alt={'명함 예시2'} />
+        </div>
+        <div className={styles.imageWrapper}>
+          <img src={'/static/images/Intro/business_card_back_dark.png'} className={styles.image} alt={'명함 예시2'} />
+        </div>
+      </Slider>
+    </section>
   );
 };
 

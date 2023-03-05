@@ -1,12 +1,12 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 import { useRef } from 'react';
-
-import Navigator from '@/components/navigator';
-import Ability from '@/containers/ability';
-import About from '@/containers/about';
-import Contact from '@/containers/contact';
-import Intro from '@/containers/intro';
+import Navigator from 'src/components/header/navigator';
+import Layout from 'src/components/layout';
+import Ability from 'src/containers/ability';
+import About from 'src/containers/about';
+import Contact from 'src/containers/contact';
+import Intro from 'src/containers/intro';
 
 const Home: NextPage = () => {
   const introRef = useRef<HTMLDivElement>(null);
@@ -15,18 +15,6 @@ const Home: NextPage = () => {
   const contactRef = useRef<HTMLDivElement>(null);
   const refArr = [introRef, aboutRef, abilityRef, contactRef];
   const tabArr = [<Intro />, <About />, <Ability />, <Contact />];
-
-  const onScrollTo = (tab: string) => {
-    if (tab === 'Intro') {
-      introRef.current?.scrollIntoView({ behavior: 'smooth' });
-    } else if (tab === 'About') {
-      aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
-    } else if (tab === 'Ability') {
-      abilityRef.current?.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      contactRef.current?.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <>
@@ -37,12 +25,13 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        {refArr.map((label, index) => (
-          <div key={index} ref={refArr[index]}>
-            {tabArr[index]}
-          </div>
-        ))}
-        <Navigator onClick={onScrollTo} />
+        <Layout nav={<Navigator labels={['Intro', 'About', 'Ability', 'Contact']} refs={refArr} />}>
+          {refArr.map((label, index) => (
+            <div key={index} ref={refArr[index]}>
+              {tabArr[index]}
+            </div>
+          ))}
+        </Layout>
       </main>
     </>
   );
