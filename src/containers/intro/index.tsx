@@ -10,7 +10,7 @@ const Intro = () => {
       <ScrollContainer>
         <ScrollPage>
           <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
-            <span style={{ fontSize: '60px' }}>새로운 명함의 시작</span>
+            <span style={{ fontSize: '60px' }}>새로운 가치의 시작</span>
           </Animator>
         </ScrollPage>
         <ScrollPage>

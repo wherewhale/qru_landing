@@ -1,9 +1,13 @@
+@use '/src/styles/theme/color' as c;
+
 .container {
   position: fixed;
   display: flex;
   padding: 30px;
-  width: 100vw;
-  height: 30px;
+  width: 100%;
+  height: 120px;
   justify-content: space-between;
+  background-color: c.$C_WHITE;
+  border-bottom: 2px solid c.$C_MAIN;
   z-index: 2;
 }
