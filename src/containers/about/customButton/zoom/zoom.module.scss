@@ -1,0 +1,21 @@
+.zoomButton {
+  all: unset;
+  list-style: none;
+  padding: 0;
+  width: 30%;
+  height: 250px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.zoomButtonBackground {
+  object-fit: cover;
+  width: 100%;
+}
+
+.zoomButton:hover .zoomButtonBackground,
+.zoomButton:focus .zoomButtonBackground {
+  transition: all 0.5s;
+  transform: scale(1.05);
+}

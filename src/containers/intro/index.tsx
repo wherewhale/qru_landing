@@ -3,6 +3,7 @@ import React from 'react';
 import { Animator, batch, Fade, FadeIn, MoveIn, MoveOut, ScrollContainer, ScrollPage, Sticky, StickyIn, ZoomIn } from 'react-scroll-motion';
 
 import styles from './intro.module.scss';
+import Slick from './slick';
 
 const Intro = () => {
   return (
@@ -10,7 +11,7 @@ const Intro = () => {
       <ScrollContainer>
         <ScrollPage>
           <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
-            <span style={{ fontSize: '60px' }}>새로운 가치의 시작</span>
+            <div className={styles.text}>새로운 가치의 시작</div>
           </Animator>
         </ScrollPage>
         <ScrollPage>
@@ -34,6 +35,7 @@ const Intro = () => {
           </Animator>
         </ScrollPage>
       </ScrollContainer>
+      <Slick />
     </section>
   );
 };

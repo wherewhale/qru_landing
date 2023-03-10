@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 import { useRef } from 'react';
+import Divider from 'src/components/body/divider';
 import Navigator from 'src/components/header/navigator';
 import Layout from 'src/components/layout';
 import Ability from 'src/containers/ability';
@@ -19,16 +20,17 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Recognize QRU</title>
         <meta name="description" content="Landing Page For Q Are U?" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/static/images/common/favicon.ico" />
       </Head>
       <main>
         <Layout nav={<Navigator labels={['Intro', 'About', 'Ability', 'Contact']} refs={refArr} />}>
           {refArr.map((label, index) => (
             <div key={index} ref={refArr[index]}>
               {tabArr[index]}
+              <Divider />
             </div>
           ))}
         </Layout>

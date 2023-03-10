@@ -1,30 +1,17 @@
 @font-face {
-  font-family: 'Noto Sans';
+  font-family: 'GmarketSans';
   font-weight: 300;
-  src: url('/public/static/fonts/NotoSansKR-Light.otf') format('otf');
+  src: url('/public/static/fonts/GmarketSansLight.otf') format('otf');
 }
 
 @font-face {
-  font-family: 'Noto Sans';
-  font-weight: 400;
-  src: url('/public/static/fonts/NotoSansKR-Regular.otf') format('otf');
-  //FIXME: 절대경로가 안먹힘 (format 'otf'가 문제였음)
-}
-
-@font-face {
-  font-family: 'Noto Sans';
+  font-family: 'GmarketSans';
   font-weight: 500;
-  src: url('/public/static/fonts/NotoSansKR-Medium.otf') format('otf');
+  src: url('/public/static/fonts/GmarketSansMedium.otf') format('otf');
 }
 
 @font-face {
-  font-family: 'Noto Sans';
+  font-family: 'GmarketSans';
   font-weight: 700;
-  src: url('/public/static/fonts/NotoSansKR-Bold.otf') format('otf');
-}
-
-@font-face {
-  font-family: 'Noto Sans';
-  font-weight: 900;
-  src: url('/public/static/fonts/NotoSansKR-Black.otf') format('otf');
+  src: url('/public/static/fonts/GmarketSansBold.otf') format('otf');
 }

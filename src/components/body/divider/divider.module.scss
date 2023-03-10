@@ -1,0 +1,8 @@
+@use '/src/styles/theme/color' as c;
+
+.divider {
+  width: 95%;
+  border-bottom: 1px solid c.$C_THEAD_GREY;
+  margin: auto;
+  padding: 20px 0;
+}
