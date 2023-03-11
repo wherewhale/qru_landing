@@ -1,0 +1,31 @@
+@use '/src/styles/theme/color' as c;
+@use '/src/styles/mixins/fonts' as f;
+
+.container {
+  padding-top: 150px;
+  width: 90%;
+  margin: auto;
+  .wrapper {
+    text-align: center;
+    align-items: center;
+    .title {
+      font-size: 3em;
+      @include f.F_Bold;
+    }
+    .subTitle {
+      margin-top: 30px;
+      font-size: 1.5em;
+      @include f.F_Medium;
+    }
+    .main {
+      margin: 30px 0;
+      font-size: 1em;
+      @include f.F_Medium;
+    }
+    .cardContainer {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}

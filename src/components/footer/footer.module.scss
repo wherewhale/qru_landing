@@ -1,0 +1,62 @@
+@use 'src/styles/theme/color' as c;
+@use 'src/styles/mixins/fonts' as f;
+
+.copyrightContainer {
+  width: 100vw;
+  padding: 48px calc((100vw - 1280px) / 2) 150px calc((100vw - 1280px) / 2);
+  background-color: c.$C_FOOTER_GREY;
+  display: flex;
+  .logoContainer {
+    width: 148px;
+    height: 60px;
+    opacity: 80%;
+  }
+  .socialButtonsContainer {
+    width: 148px;
+    margin: 40px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    .socialButtonIcon {
+      width: 20px;
+      height: 20px;
+      padding: 0;
+      object-fit: contain;
+      list-style: none;
+      .iconButton {
+        list-style: none;
+        padding: 0;
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        overflow: hidden;
+      }
+    }
+  }
+  .companyInformation {
+    margin: 0 0 0 60px;
+    @include f.F_Medium;
+    color: c.$C_MAIN;
+    .footerText {
+      margin: 0 0 10px 0;
+    }
+    .textMarginTop {
+      margin: 30px 0 0 0;
+    }
+  }
+
+  .guideTextContainer {
+    margin: 0 0 0 175px;
+    @include f.F_Light;
+    color: c.$C_MAIN;
+    display: flex;
+    .guideText {
+      margin: 0 10px;
+    }
+    .guideTextBold {
+      white-space: nowrap;
+      cursor: pointer;
+    }
+  }
+}

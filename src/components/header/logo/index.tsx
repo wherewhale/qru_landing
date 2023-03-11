@@ -1,9 +1,21 @@
+import { useEffect, useState } from 'react';
+
 import styles from './logo.module.scss';
 
-const Logo = () => {
+interface Props {
+  isFooter?: boolean;
+}
+
+const Logo = ({ isFooter }: Props) => {
+  const [src, setSrc] = useState('1x');
+  useEffect(() => {
+    if (isFooter) {
+      setSrc('footer');
+    }
+  }, []);
   return (
     <button className={styles.wrapper}>
-      <img src={'/static/images/common/logo_1x.png'} className={styles.image} alt={'logo'} />
+      <img src={`/static/images/common/logo_${src}.png`} className={styles.image} alt={'logo'} />
     </button>
   );
 };

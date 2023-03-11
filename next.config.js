@@ -7,4 +7,8 @@ const nextConfig = {
 //   experimental: { esmExternals: true },
 // };
 
+module.exports = {
+  poweredByHeader: process.env.NODE_ENV === 'development',
+};
+
 module.exports = nextConfig;
