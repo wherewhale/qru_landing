@@ -8,7 +8,7 @@ interface Props {
 const ZoomButton = ({ src, alt }: Props) => {
   return (
     <button className={styles.zoomButton}>
-      <img src={`/static/images/About/sample_${src}.png`} className={styles.zoomButtonBackground} alt={alt} />
+      <img src={`/static/images/Ability/sample_${src}`} className={styles.zoomButtonBackground} alt={alt} />
     </button>
   );
 };

@@ -28,10 +28,10 @@ const About = () => {
         </div>
       </Parallax>
 
-      <Parallax speed={5}>
+      <Parallax>
         <div className={cx(styles.wrapper, styles.color)}>
           <img src={'/static/images/About/background_vision.png'} className={styles.background} alt={'background'} />
-          <div className={cx(styles.subTitle, styles.space)}>늘 감동을 제작하고 작품 그 이상의 가치를 생산합니다.</div>
+          <div className={styles.subTitle}>늘 감동을 제작하고 작품 그 이상의 가치를 생산합니다.</div>
           <div className={cx(styles.main, styles.large)}>
             고객을 100% 반영한 최적화 맞춤형 서비스를 창출하여
             <p /> 단순 생산, 판매를 넘어 가치 창출의 서비스 경험을 제공하겠습니다.
