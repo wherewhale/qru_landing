@@ -15,7 +15,7 @@ const Home: NextPage = () => {
   const abilityRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
   const refArr = [introRef, aboutRef, abilityRef, contactRef];
-  const tabArr = [<Intro />, <About />, <Ability />, <Contact />];
+  const tabArr = [<Intro key={'intro'} />, <About key={'about'} />, <Ability key={'ability'} />, <Contact key={'contact'} />];
 
   return (
     <>
