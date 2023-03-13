@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import styles from './card.module.scss';
 
 interface Props {
@@ -14,17 +16,17 @@ const Card = ({ title, price, subtitle, option, to }: Props) => {
       <div className={styles.title}>{title}</div>
       <div className={styles.title}>₩{price}</div>
       <div className={styles.subTitle}>{subtitle}</div>
-      <div>
+      <div className={styles.main}>
         {option.map((_, index) => (
           <div className={styles.option} key={`${option[index].charAt(1)}${index}`}>
-            <img src="/static/images/Contact/icon_check.svg" className={styles.icon} />
+            <Image src="/static/images/Contact/icon_check.svg" className={styles.icon} width={20} height={20} alt="check" />
             {option[index]}
           </div>
         ))}
       </div>
-      <button className={styles.button}>
+      <button type="button" className={styles.button}>
         구매 요청
-        <img src="/static/images/Contact/icon_arrow.svg" className={styles.icon} />
+        <Image src="/static/images/Contact/icon_arrow.svg" className={styles.icon} width={20} height={20} alt="arrow" />
       </button>
     </div>
   );

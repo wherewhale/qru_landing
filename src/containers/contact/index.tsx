@@ -7,7 +7,10 @@ const Contact = () => {
   return (
     <section className={styles.container}>
       <div className={styles.wrapper}>
-        <div className={styles.title}>여러분에게 맞는 상품을 확인해보세요.</div>
+        <div className={styles.title}>
+          여러분에게 맞는 상품을
+          <br /> 확인해보세요.
+        </div>
         <div className={styles.cardContainer}>
           <Card
             title={'BASIC'}
