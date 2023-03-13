@@ -11,7 +11,7 @@
   }
 
   .nav {
-    @include r.between(S, SD) {
+    @include r.before(SD) {
       display: flex;
     }
     text-align: right;
@@ -23,10 +23,18 @@
     letter-spacing: 0.05em;
     position: relative;
     cursor: pointer;
+
     @include r.between(S, SD) {
       display: flex;
       margin-left: 15px;
     }
+
+    @include r.before(SD) {
+      letter-spacing: none;
+      font-size: 0.8em;
+      margin-left: 10px;
+    }
+
     &:after {
       background: none repeat scroll 0 0 transparent;
       bottom: 0;

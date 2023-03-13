@@ -19,9 +19,14 @@
     border-bottom: 1px solid c.$C_MAIN;
   }
 
+  @include r.before(SD) {
+    height: 60px;
+    border-bottom: 1px solid c.$C_MAIN;
+  }
+
   .slogan {
     @include f.F_Medium;
-    @include r.between(S, SD) {
+    @include r.before(SD) {
       display: none;
     }
   }

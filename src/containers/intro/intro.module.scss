@@ -5,8 +5,10 @@
 .text {
   font-size: 3em;
   @include f.F_Bold;
-  @include r.between(S, SD) {
+  @include r.before(SD) {
     font-size: 1.5em;
+    text-align: center;
+    line-height: 1.2em;
   }
 }
 .imageContainer {
@@ -22,7 +24,7 @@
       width: 200px;
     }
     object-fit: contain;
-    @include r.between(S, SD) {
+    @include r.before(SD) {
       width: 120px;
     }
   }

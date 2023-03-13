@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 import styles from './logo.module.scss';
@@ -15,7 +16,7 @@ const Logo = ({ isFooter }: Props) => {
   }, []);
   return (
     <button className={styles.wrapper}>
-      <img src={`/static/images/common/logo_${src}.png`} className={styles.image} alt={'logo'} />
+      <Image src={`/static/images/common/logo_${src}.png`} className={styles.image} alt={'logo'} width={80} height={80} />
     </button>
   );
 };
