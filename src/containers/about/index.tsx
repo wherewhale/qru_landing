@@ -59,7 +59,7 @@ const About = () => {
             height={height}
           />
           <h2 className={styles.subTitle}>
-            늘 감동을 제작하고 작품 <p />그 이상의 가치를 생산합니다.
+            늘 감동을 제작하고 작품 <br />그 이상의 가치를 생산합니다.
           </h2>
           <p className={cx(styles.main, styles.large)}>
             고객을 100% 반영한 최적화 맞춤형 서비스를 창출하여

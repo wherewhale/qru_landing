@@ -1,7 +1,6 @@
+@use '/src/styles/mixins/responsive' as r;
+
 .zoomButton {
-  all: unset;
-  list-style: none;
-  padding: 0;
   width: 30%;
   height: 350px;
   text-align: center;
@@ -11,7 +10,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include r.before(SD) {
+    width: 90%;
+    height: 200px;
+    margin: auto;
+  }
 }
+
 .zoomButtonBackground {
   object-fit: cover;
   height: 100%;
