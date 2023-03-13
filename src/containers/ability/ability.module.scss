@@ -1,30 +1,57 @@
 @use '/src/styles/theme/color' as c;
 @use '/src/styles/mixins/fonts' as f;
+@use '/src/styles/mixins/responsive' as r;
 
 .container {
   width: 90%;
   margin: auto;
-  .block {
-    height: 70vh;
+
+  .textContainer {
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    @include r.before(SD) {
+      display: block;
+      margin-top: 30px;
+      height: 450px;
+    }
+
     .wrapper {
       text-align: center;
       align-items: center;
+
       .title {
         font-size: 3em;
+
         @include f.F_Bold;
+
+        @include r.before(SD) {
+          font-size: 2em;
+          margin-top: 30px;
+        }
       }
+
       .subTitle {
         margin-top: 30px;
         font-size: 1.5em;
+
         @include f.F_Medium;
+
+        @include r.before(SD) {
+          font-size: 1.2em;
+        }
       }
+
       .main {
         margin: 30px 0;
         font-size: 1em;
+
         @include f.F_Medium;
+
+        @include r.before(SD) {
+          @include f.F_Light;
+        }
       }
     }
   }

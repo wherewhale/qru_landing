@@ -1,23 +1,56 @@
 @use 'src/styles/theme/color' as c;
 @use 'src/styles/mixins/fonts' as f;
+@use '/src/styles/mixins/responsive' as r;
 
-.copyrightContainer {
-  width: 100vw;
-  padding: 48px calc((100vw - 1280px) / 2) 150px calc((100vw - 1280px) / 2);
+.footer {
+  width: 100%;
+  padding: 48px;
   background-color: c.$C_FOOTER_GREY;
   display: flex;
+
+  @include r.before(SD) {
+    padding: 5px;
+  }
+
+  @include r.before(SD) {
+    display: block;
+  }
+
   .logoContainer {
+    margin-left: 50px;
     width: 148px;
     height: 60px;
     opacity: 80%;
+
+    @include r.before(SD) {
+      display: flex;
+      width: auto;
+      height: auto;
+      margin-left: 0;
+    }
+
+    .logoWrapper {
+      width: 100%;
+      margin: auto;
+
+      @include r.before(SD) {
+        width: 80px;
+        justify-content: space-around;
+      }
+    }
   }
   .socialButtonsContainer {
     width: 148px;
     margin: 40px 0 0 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     list-style: none;
+
+    @include r.before(SD) {
+      width: 250px;
+    }
+
     .socialButtonIcon {
       width: 20px;
       height: 20px;
@@ -36,27 +69,27 @@
   }
   .companyInformation {
     margin: 0 0 0 60px;
-    @include f.F_Medium;
     color: c.$C_MAIN;
+
+    @include f.F_Medium;
+
+    @include r.before(SD) {
+      margin: auto;
+
+      @include f.F_Light;
+      font-size: 0.6em;
+    }
+
     .footerText {
       margin: 0 0 10px 0;
     }
+
     .textMarginTop {
       margin: 30px 0 0 0;
-    }
-  }
 
-  .guideTextContainer {
-    margin: 0 0 0 175px;
-    @include f.F_Light;
-    color: c.$C_MAIN;
-    display: flex;
-    .guideText {
-      margin: 0 10px;
-    }
-    .guideTextBold {
-      white-space: nowrap;
-      cursor: pointer;
+      @include r.before(SD) {
+        text-align: center;
+      }
     }
   }
 }

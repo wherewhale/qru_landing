@@ -1,14 +1,33 @@
 @use '/src/styles/theme/color' as c;
+@use '/src/styles/mixins/fonts' as f;
+@use '/src/styles/mixins/responsive' as r;
 
 .container {
   position: fixed;
   display: flex;
   padding: 30px;
-  width: 100%;
+  width: 100vw;
   height: 120px;
   align-items: center;
   justify-content: space-between;
   background-color: c.$C_WHITE;
   border-bottom: 2px solid c.$C_MAIN;
   z-index: 2;
+
+  @include r.between(S, SD) {
+    height: 80px;
+    border-bottom: 1px solid c.$C_MAIN;
+  }
+
+  @include r.before(SD) {
+    height: 60px;
+    border-bottom: 1px solid c.$C_MAIN;
+  }
+
+  .slogan {
+    @include f.F_Medium;
+    @include r.before(SD) {
+      display: none;
+    }
+  }
 }

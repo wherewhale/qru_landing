@@ -15,7 +15,7 @@ const Home: NextPage = () => {
   const abilityRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
   const refArr = [introRef, aboutRef, abilityRef, contactRef];
-  const tabArr = [<Intro key={'intro'} />, <About key={'about'} />, <Ability key={'ability'} />, <Contact key={'contact'} />];
+  const tabArr = [<Intro key={'IntroTag'} />, <About key={'AboutTag'} />, <Ability key={'AbilityTag'} />, <Contact key={'ContactTag'} />];
 
   return (
     <>
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
       <main>
         <Layout nav={<Navigator labels={['Intro', 'About', 'Ability', 'Contact']} refs={refArr} />}>
           {refArr.map((label, index) => (
-            <div key={index} ref={refArr[index]}>
+            <div key={`page${index}`} ref={refArr[index]}>
               {tabArr[index]}
               <Divider />
             </div>

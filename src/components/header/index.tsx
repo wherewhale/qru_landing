@@ -11,7 +11,7 @@ const Header = ({ children }: Props) => {
   return (
     <header className={styles.container}>
       <Logo />
-      <span>Recognize Who You Are</span>
+      <span className={styles.slogan}>Recognize Who You Are</span>
       {children}
     </header>
   );

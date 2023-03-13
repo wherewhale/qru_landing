@@ -1,9 +1,15 @@
 @use '/src/styles/theme/color' as c;
 @use '/src/styles/mixins/fonts' as f;
+@use '/src/styles/mixins/responsive' as r;
 
 .text {
   font-size: 3em;
   @include f.F_Bold;
+  @include r.before(SD) {
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 1.2em;
+  }
 }
 .imageContainer {
   width: 100vw;
@@ -14,7 +20,13 @@
 
   .card {
     width: 300px;
+    @include r.responsiveOnly(SD) {
+      width: 200px;
+    }
     object-fit: contain;
+    @include r.before(SD) {
+      width: 120px;
+    }
   }
   .cardBack {
     width: 150px;

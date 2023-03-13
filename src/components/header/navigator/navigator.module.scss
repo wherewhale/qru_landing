@@ -1,15 +1,55 @@
 @use '/src/styles/theme/color' as c;
+@use '/src/styles/mixins/fonts' as f;
+@use '/src/styles/mixins/responsive' as r;
 
 .container {
   color: c.$C_MAIN;
-  text-align: right;
-  .dark {
+  @include f.F_Light;
+
+  &.dark {
     color: c.$C_WHITE;
   }
+
+  .nav {
+    @include r.before(SD) {
+      display: flex;
+    }
+    text-align: right;
+  }
+
   .label {
-    padding-left: 15px;
     margin-bottom: 5px;
-    // text-shadow: -1px -1px 0 c.$C_SUB, 1px -1px 0 c.$C_SUB, -1px 1px 0 c.$C_SUB, 1px 1px 0 c.$C_SUB;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    position: relative;
     cursor: pointer;
+
+    @include r.between(S, SD) {
+      display: flex;
+      margin-left: 15px;
+    }
+
+    @include r.before(SD) {
+      letter-spacing: none;
+      font-size: 0.8em;
+      margin-left: 10px;
+    }
+
+    &:after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: '';
+      display: block;
+      height: 1px;
+      left: 50%;
+      position: absolute;
+      background: c.$C_SUB;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+    &:hover:after {
+      width: 100%;
+      left: 0;
+    }
   }
 }

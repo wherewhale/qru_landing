@@ -15,7 +15,7 @@ const Navigator = ({ labels, refs }: Props) => {
   };
   return (
     <nav className={styles.container}>
-      <ul>
+      <ul className={styles.nav}>
         {labels.map((label, index) => (
           <li className={cx(styles.label)} key={`${label}`} onClick={() => onScrollTo(refs[index])}>
             {label}

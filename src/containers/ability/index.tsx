@@ -3,10 +3,12 @@ import React from 'react';
 import styles from './ability.module.scss';
 import ZoomButton from './customButton/zoom';
 
+//TODO: 컴포넌트로 구성
 const Ability = () => {
   return (
     <section className={styles.container}>
-      <div className={styles.block}>
+      <div className={styles.textContainer}>
+        <ZoomButton src="card.png" alt="card image" />
         <div className={styles.wrapper}>
           <div className={styles.title}>명품 소개 가치</div>
           <div className={styles.subTitle}>편리한 디지털 명함 제작 가능</div>
@@ -16,9 +18,8 @@ const Ability = () => {
             인상적이고, 편리한 인사를 주고 받아보세요.
           </div>
         </div>
-        <ZoomButton src="card.png" alt="card image" />
       </div>
-      <div className={styles.block}>
+      <div className={styles.textContainer}>
         <ZoomButton src="pet.png" alt="cat image" />
         <div className={styles.wrapper}>
           <div className={styles.title}>기억의 저장</div>
@@ -29,7 +30,8 @@ const Ability = () => {
           </div>
         </div>
       </div>
-      <div className={styles.block}>
+      <div className={styles.textContainer}>
+        <ZoomButton src="portfolio.jpg" alt="portfolio image" />
         <div className={styles.wrapper}>
           <div className={styles.title}>커리어의 시각화</div>
           <div className={styles.subTitle}>나의 능력과 가치를 보여주는 일</div>
@@ -39,7 +41,6 @@ const Ability = () => {
             고객의 요구를 100% 반영합니다.
           </div>
         </div>
-        <ZoomButton src="portfolio.jpg" alt="portfolio image" />
       </div>
     </section>
   );
