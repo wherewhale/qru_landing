@@ -1,14 +1,23 @@
 @use '/src/styles/theme/color' as c;
+@use '/src/styles/mixins/fonts' as f;
+@use '/src/styles/mixins/responsive' as r;
 
 .container {
   position: fixed;
   display: flex;
   padding: 30px;
-  width: 100%;
+  width: 100vw;
   height: 120px;
   align-items: center;
   justify-content: space-between;
   background-color: c.$C_WHITE;
   border-bottom: 2px solid c.$C_MAIN;
   z-index: 2;
+
+  .slogan {
+    @include f.F_Medium;
+    @include r.between(S, SD) {
+      display: none;
+    }
+  }
 }

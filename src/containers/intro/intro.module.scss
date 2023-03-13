@@ -1,5 +1,6 @@
 @use '/src/styles/theme/color' as c;
 @use '/src/styles/mixins/fonts' as f;
+@use '/src/styles/mixins/responsive' as r;
 
 .text {
   font-size: 3em;

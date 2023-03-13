@@ -1,5 +1,7 @@
+@use '/src/styles/mixins/responsive' as r;
+
 .slick {
-  width: 90%;
+  width: calc(100vw - 50px);
   margin: auto;
   .imageWrapper {
     width: 300px;
@@ -8,6 +10,13 @@
       width: 300px;
       object-fit: contain;
       margin: 0 20px;
+
+      @include r.responsiveOnly(SD) {
+        width: 150px;
+      }
+      @include r.between(S, SD) {
+        width: 80px;
+      }
     }
   }
 }

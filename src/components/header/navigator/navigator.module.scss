@@ -1,10 +1,17 @@
 @use '/src/styles/theme/color' as c;
+@use '/src/styles/mixins/fonts' as f;
+@use '/src/styles/mixins/responsive' as r;
 
 .container {
   color: c.$C_MAIN;
   text-align: right;
-  .dark {
+  &.dark {
     color: c.$C_WHITE;
+  }
+  .nav {
+    @include r.between(S, SD) {
+      display: flex;
+    }
   }
   .label {
     padding-left: 15px;

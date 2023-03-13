@@ -4,9 +4,6 @@ import { useRef } from 'react';
 import Divider from 'src/components/body/divider';
 import Navigator from 'src/components/header/navigator';
 import Layout from 'src/components/layout';
-import Ability from 'src/containers/ability';
-import About from 'src/containers/about';
-import Contact from 'src/containers/contact';
 import Intro from 'src/containers/intro';
 
 const Home: NextPage = () => {
@@ -15,7 +12,8 @@ const Home: NextPage = () => {
   const abilityRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
   const refArr = [introRef, aboutRef, abilityRef, contactRef];
-  const tabArr = [<Intro />, <About />, <Ability />, <Contact />];
+  const tabArr = [<Intro />];
+  // , <About />, <Ability />, <Contact />
 
   return (
     <>
