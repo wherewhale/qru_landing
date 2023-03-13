@@ -1,7 +1,12 @@
+@use '/src/styles/mixins/responsive' as r;
+
 .wrapper {
   .image {
     width: 80px;
     height: 80px;
     object-fit: contain;
+    @include r.between(S, SD) {
+      width: 55px;
+    }
   }
 }
